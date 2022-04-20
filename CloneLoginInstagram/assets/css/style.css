@@ -1,0 +1,225 @@
+:root{
+    --azul-facebook: #38569e;
+    --azul-claro-btn: #b2dffc;
+    --azul-link: #278dd8;
+    --off-white: #fafafa;
+    --cinza: #D3D3D3;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--off-white);
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+
+    width: 90%;
+    margin-top: -1rem;
+}
+
+/* Coluna 1 */
+.column-1{
+    width: 30rem;
+}
+.column-1 img{
+    width: 30rem;
+}
+
+/* Coluna 2 */
+
+.column-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 23rem;
+}
+
+.group-access{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 76vh;
+}
+
+.box-access{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #fff;
+    border: 1px solid var(--cinza);
+    width: 22rem;
+    padding: 1rem 0;
+}
+
+/* Primeiro box access */
+
+.box-access:nth-child(1) #logo-instagram{
+    margin: 2rem 0 2.5rem 0;
+}
+
+.box-access:nth-child(1) form{
+    display: flex;
+    flex-direction: column;
+
+    width: 80%;
+}
+
+form input{
+    height: 2.1rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--cinza);
+    background-color: var(--off-white);
+    padding: 0.8rem;
+}
+
+input::placeholder{
+    font-size: 0.1rem;
+    color: rgb(141, 141, 141);
+}
+
+input[type=submit]{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--azul-claro-btn);
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 0.3rem;
+}
+
+/* Criando a barra de separação OU */
+
+.paragraph-or-options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.7rem;
+    color: rgb(141, 141, 141);
+    margin: 1rem;
+}
+
+.paragraph-or-options::before, .paragraph-or-options::after{
+    content: "";
+    width: 7rem;
+    height: 1px;
+    background-color: var(--cinza);
+    position: relative;
+    margin-right: 1rem;
+}
+.paragraph-or-options::after{
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+#access-facebook{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#access-facebook p{
+    color: var(--azul-facebook);
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin: 0 0 0 0.5rem;
+    cursor: pointer;
+}
+
+#access-facebook img{
+    width: 1.5rem;
+}
+
+.paragraph-forgot-password{
+    font-size: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Segundo box access */
+.box-access:nth-child(2){
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+.box-access:nth-child(2) span{
+    color: var(--azul-link);
+    font-weight: bold;
+}
+
+#get-the-app{
+    margin: 1.5rem;
+}
+
+#get-the-app p{
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+#options-downloads{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.link-download{
+    height: 3rem;
+    width: 8.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.link-download:nth-child(1){
+    background-image: url("../img/download-apple.png");
+    margin-right: 0.2rem;
+}
+
+.link-download:nth-child(2){
+    background-image: url("../img/download-google.png");
+    margin-left: 0.2rem;
+}
+
+/* Responsive */
+
+@media (max-width:800px){
+    .flex-container{
+        flex-direction: column;
+    }
+
+    .column-1{
+        display: none;
+    }
+
+    .column-2{
+        margin: 2rem auto;
+        width: 100%;
+    }
+}
+
+@media (max-width:450px){
+    body{
+        background-color: #fff;
+    }
+    .box-access{
+        border: none;
+    }
+}
